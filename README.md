@@ -39,5 +39,9 @@ streamlit run app/app_public.py
 ## Disclaimer
 This repository is for academic research only and does not provide financial advice or a deployable trading product.
 
+## Research Context
+This repository accompanies a broader research report comparing classical ML and deep learning approaches for financial time-series modeling under realistic market constraints.
+
 ## Author
 MohammadReza Akhlaghi
+
