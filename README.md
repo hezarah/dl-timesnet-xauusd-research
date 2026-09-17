@@ -115,3 +115,106 @@ Regime-Based Analysis
         │
         ▼
 Economic / Risk Evaluation
+```
+
+---
+
+## Repository Structure
+
+```text
+dl-timesnet-xauusd-research/
+│
+├── app/
+│   └── Public research demonstration
+│
+├── configs/
+│   └── Configuration templates
+│
+├── data/
+│   └── Data schema and documentation
+│
+├── docs/
+│   └── Methodology and research notes
+│
+├── evaluation/
+│   └── Evaluation and analysis components
+│
+├── figures/
+│   └── Research figures and visual outputs
+│
+├── models/
+│   └── Model implementations and interfaces
+│
+├── src/
+│   └── Core research utilities
+│
+├── training/
+│   └── Training and experiment components
+│
+├── CITATION.cff
+├── environment.yml
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Public Research Release
+
+This repository is a public research-oriented implementation.
+
+For data licensing, privacy, reproducibility and research-security reasons, the following components are not included:
+
+- Full proprietary dataset
+- Trained production models
+- Broker connectivity
+- Live execution infrastructure
+- Private execution configurations
+
+The public repository therefore focuses on the research methodology, experiment structure and reproducible components that can be shared openly.
+
+---
+
+## Reproducibility
+
+The repository is organized so that the publicly available research components can be inspected independently of any live trading infrastructure.
+
+Configuration files, methodology notes and evaluation components are provided to make the experimental design transparent.
+
+Where proprietary inputs are required, the repository documents the expected data schema rather than distributing the original data.
+
+---
+
+## Research Context
+
+This project is part of an ongoing research programme at the intersection of:
+
+- Financial Econometrics
+- Financial Machine Learning
+- High-Frequency Financial Time Series
+- Deep Sequence Modeling
+- Volatility and Regime Modeling
+- Risk-Aware Forecasting
+
+The broader objective is to study robust machine-learning methodologies for noisy and non-stationary financial data rather than to provide a commercial trading product.
+
+---
+
+## Citation
+
+If you use this repository or the associated research methodology, please cite:
+
+**Akhlaghi, M. (2026).  
+Deep Sequence Architectures in High-Frequency Finance: Benchmarking TimesNet and Classical Machine Learning Across Volatility Regimes. SSRN.**
+
+---
+
+## Author
+
+**Mohammadreza Akhlaghi**
+
+Financial Machine Learning & Econometrics Researcher
+
+- GitHub: https://github.com/hezarah
+- SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7034100
+- LinkedIn: Mohammadreza Akhlaghi
