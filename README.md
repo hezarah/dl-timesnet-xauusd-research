@@ -1,47 +1,117 @@
-# Deep Learning Time-Series Research on XAUUSD (TimesNet)
+# Deep Sequence Modeling for High-Frequency Financial Time Series
 
-This repository provides a **research-oriented deep learning framework** for modeling XAUUSD using **5-minute candlestick data (2013–2025)**.
+Research framework for studying deep sequence architectures on high-frequency financial time series, using 5-minute XAUUSD data as the empirical setting.
 
-The public code is released as a **Research-only edition**:
-- methodology and evaluation protocol are reproducible
-- suitable for academic review and PhD applications
-- **without** any broker connectivity, live trading, proprietary datasets, or commercial execution rules
+The repository accompanies the research paper:
 
-## Highlights
-- Sequence modeling with TimesNet-style architectures
-- Window-based time-series formulation
-- Research-grade evaluation (out-of-sample + robustness perspective)
-- Figures and analysis consistent with the accompanying Research Report
+**Deep Sequence Architectures in High-Frequency Finance: Benchmarking TimesNet and Classical Machine Learning Across Volatility Regimes**
 
-## What is intentionally excluded (IP protection)
-- full dataset
-- trained weights
-- MetaTrader/MT5 connectivity
-- production inference-to-execution pipeline
-- exact commercial risk and execution parameters
+[SSRN Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7034100)
 
-The public release focuses on methodology and evaluation; the private edition includes live connectivity and commercial execution logic.
+---
 
+## Research Objective
 
-## Repository Structure
-- `app/` Streamlit research demo (public-safe)
-- `src/` lightweight stubs and schema definitions
-- `configs/` configuration templates
-- `data/` schema only (no proprietary data)
-- `figures/` example outputs used in the report
-- `docs/` methodology and evaluation notes
+This project investigates how modern deep sequence architectures model noisy, non-stationary financial time series and how their predictive behaviour changes across different volatility and market regimes.
 
-## Run (demo)
-```bash
-pip install -r requirements.txt
-streamlit run app/app_public.py
+The empirical framework compares deep sequence models with classical machine-learning baselines under chronological, out-of-sample evaluation.
 
-## Disclaimer
-This repository is for academic research only and does not provide financial advice or a deployable trading product.
+The main research questions are:
 
-## Research Context
-This repository accompanies a broader research report comparing classical ML and deep learning approaches for financial time-series modeling under realistic market constraints.
+1. How do deep sequence architectures perform relative to classical machine-learning baselines on high-frequency financial data?
+2. How does model performance change across different volatility and market regimes?
+3. How can leakage-free labeling and chronological evaluation improve the validity of financial forecasting experiments?
+4. To what extent do predictive metrics translate into economically meaningful risk-adjusted outcomes?
 
-## Author
-MohammadReza Akhlaghi
+---
 
+## Dataset
+
+The empirical study uses 5-minute XAUUSD candlestick data covering 2013–2025.
+
+The research pipeline is designed around:
+
+- Open, High, Low and Close price data
+- Derived volatility measures
+- Technical and statistical features
+- Sequential windows of historical observations
+- Chronological train/validation/test evaluation
+
+The full research dataset is not included in this public repository.
+
+---
+
+## Models
+
+The research framework considers multiple model families, including:
+
+### Deep Sequence Models
+
+- TimesNet
+- PatchTST
+- LSTM
+- GRU
+- TCN
+
+### Classical Machine Learning Baselines
+
+- Random Forest
+- XGBoost
+- MLP
+
+The purpose of the comparison is methodological rather than to present a deployable trading system.
+
+---
+
+## Evaluation Framework
+
+Financial time-series experiments are evaluated using chronological and walk-forward principles to reduce look-ahead bias and data leakage.
+
+The evaluation framework considers:
+
+- Out-of-sample predictive performance
+- Accuracy
+- F1 score
+- Matthews Correlation Coefficient (MCC)
+- Regime-dependent performance
+- Risk-aware trading simulation
+- Maximum drawdown
+- Risk-adjusted cumulative performance
+
+The methodology is designed to distinguish predictive performance from economic utility.
+
+---
+
+## Research Methodology
+
+The overall workflow is:
+
+```text
+Historical Market Data
+        │
+        ▼
+Data Preparation
+        │
+        ▼
+Feature Construction
+        │
+        ▼
+Chronological Windowing
+        │
+        ▼
+Causal / Risk-Aware Labeling
+        │
+        ▼
+Deep Sequence Modeling
+        │
+        ▼
+Classical ML Baselines
+        │
+        ▼
+Out-of-Sample Evaluation
+        │
+        ▼
+Regime-Based Analysis
+        │
+        ▼
+Economic / Risk Evaluation
